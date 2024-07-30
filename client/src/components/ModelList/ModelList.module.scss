@@ -1,0 +1,84 @@
+.modelsList {
+    width: 20%;
+    position: relative;
+    margin-bottom: 30px;
+    &:hover {
+        .models {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .selectedItems {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 100%;
+        height: 50px;
+        overflow-y: auto;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+        padding-bottom: 10px;
+        &::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 20px;
+            background: var(--light-gray);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--black);
+            border-radius: 20px;
+        }
+        .selectedItem {
+            display: flex;
+            align-items: center;
+            padding: 3px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            margin: 0 5px 5px 0;
+        }
+        .deleteItem {
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    }
+    .models {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--white);
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        overflow-y: auto;
+        border: 1px solid var(--light-gray);
+        padding: 5px 0;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        padding-bottom: 10px;
+        &::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 20px;
+            background: var(--light-gray);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--black);
+            border-radius: 20px;
+        }
+        input {
+            display: none;
+        }
+        .model {
+            padding: 5px;
+            &.activeModel {
+                background-color: var(--light-gray);
+            }
+        }
+    }
+}

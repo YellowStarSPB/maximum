@@ -1,0 +1,36 @@
+.CarNavigate {
+    display: flex;
+    margin-bottom: 40px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 20px;
+        background: var(--light-gray);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--black);
+        border-radius: 20px;
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        line-height: 100%;
+        flex-shrink: 0;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .itemName {
+        font-size: 20px;
+        margin-right: 5px;
+        color: var(--red);
+    }
+    .itemCount {
+        font-size: 16px;
+        margin-top: 3px;
+    }
+}

@@ -1,0 +1,30 @@
+.carList {
+    
+    .carListHeader {
+        background-color: var(--light-gray);
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 200px repeat(5, 1fr);
+        column-gap: 10px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .carListItems{
+        overflow-y: auto;
+        border: 1px solid var(--light-gray);
+
+    }
+    .carListItem{
+        display: grid;
+        padding: 10px;
+        grid-template-columns: 200px repeat(5, 1fr);
+        column-gap: 10px;
+        border-bottom: 1px solid var(--dark-gray);
+        &:last-child {
+            border: none;
+        }
+        span {
+            overflow: auto;
+        }
+    }
+}
